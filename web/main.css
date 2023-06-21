@@ -31,9 +31,17 @@ html {
 
 }
 
+.input {
+    width:200px;
+    height:50px;
+    border:none;
+    padding:5px 2px;
+    border:1px solid #ccc;
+}
+
 button{
     min-width:200px;
-    height:50px;
+    height:30px;
     border:none;
     background:blue;
     color:#fff;
@@ -42,7 +50,13 @@ button{
     cursor: pointer;
     margin:0px 15px;
 }
+.modal-footer {
+    text-align: right ;
+}
 
+.row {
+    margin-bottom:15px;
+}
 
 /* Hide the modal by default */
 #modal {
@@ -84,7 +98,20 @@ button{
     cursor: pointer;
   }
 
-  .modal-head {
 
+  :root{
+    --base-font-size: 16px;
+    --grid-column-count: 10;
+    --container-gutter: 15px;
+    --container-max-width: 85.75rem;
+    --container-max-width-minus-gutters: calc(var(--container-max-width) - (var(--container-gutter)) * 2);
+    --container-outer-width: max(calc((100vw - var(--container-max-width-minus-gutters)) / 2), var(--container-gutter));
+    --container-inner-width: calc(100vw - var(--container-outer-width) * 2);
   }
+  .mulit-column{
 
+    --item-width: calc(
+        var(--container-inner-width) / var(--section-items-per-row) - (var(--multi-column-column-gap) / var(--section-items-per-row) * (var(--section-items-per-row) - 1))
+        
+        );
+  }

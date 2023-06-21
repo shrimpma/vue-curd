@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whatis app</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        width: 100%;
+        border: none;
+      }
+      .h3 ,.h1{
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      .whats_app {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 15px;
+        --default-space:10px;
+      }
+
+      .coupon_pics {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin-left: -10px;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul,
+      li,
+      div {
+        padding: 0;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: var(--default-space);
+        column-gap: var(--default-space);
+      }
+      
+
+      .flex-item-whole{
+        width: 100%;
+      }
+
+      .pt-10 {
+        font-size: 1.2rem;
+        padding-top: 10px;
+      }
+
+      .flex-item {
+        width: calc(
+          (100% -  (var(--row-per-num) * var(--default-space))) /var(--row-per-num)
+        );
+      }
+
+      .multi-column__item {
+        --row-per-num: 2;
+      
+    }
+      .customer ul li img {
+        width: 24px;
+        display: block;
+        margin: 0 auto;
+      }
+      .text-center {
+        text-align: center;
+      }
+
+      .block {
+        margin-top:20px;
+      }
+
+      .customer ul li {
+        background: #f4f3e7;
+        padding: 40px 0;
+      }
+
+      @media screen and (max-width: 768px){
+        .coupon_cen h3 {
+            font-size: 22px;
+            color: #30302c;
+            margin: 0 auto 25px;
+            padding-top: 48px;
+        }
+        .customer h3 {
+            font-size: 22px;
+            margin: 60px auto 25px;
+        }
+        .how_to_get h3 {
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        .how_to_get h5 {
+            margin: 30px auto 8px;
+        }
+    }
+
+  
+      @media screen and (min-width: 769px) {
+       
+        .multi-column__item {
+            --row-per-num: 4;
+        }
+
+        .flex{
+            flex-wrap: nowrap;
+        }
+        
+
+        .flex-item-1\/2 {
+            width: calc((100% - var(--row-per-num)* var(--default-space)) / var(--row-per-num));
+        }
+           
+        .multi-column__item {
+            --row-per-num: 2;
+        }
+
+        .h5 {
+            color: #003714;
+            font-size: 20px;
+            text-align: center;
+        }
+        .coupon_pic {
+            margin-bottom: 45px;
+        }
+
+         h3,.h1  {
+            font-size: 30px;
+            margin: 10px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="whats_app">
+      <div class="coupon">
+        <div class="coupon_cen">
+          <h3 class="text-center ">WhatsApp Member Coupon</h3>
+          <div class="coupon_pic flex multi-column__item">
+            <picture class="flex-item">
+              <source
+                media="(max-width:768px)"
+                srcset="
+                  https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17113_2x_7f4ac184-b362-4737-af11-a31797475ea5.png?v=1684309324
+                "
+              />
+              <source
+                srcset="
+                  https://cdn.shopify.com/s/files/1/1720/3725/files/17119_b52ddfa8-effd-46f5-810c-338aae37b5cd.png?v=1684308903
+                "
+              />
+              <img
+                src="https://cdn.shopify.com/s/files/1/1720/3725/files/17119_b52ddfa8-effd-46f5-810c-338aae37b5cd.png?v=1684308903"
+                alt=""
+              />
+            </picture>
+            <picture class="flex-item">
+              <source
+                media="(max-width:768px)"
+                srcset="
+                  https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17130_2x_bb194cfa-2a37-469c-a934-a01f1aa81c47.png?v=1684309324
+                "
+              />
+              <source
+                srcset="
+                  https://cdn.shopify.com/s/files/1/1720/3725/files/17134.png?v=1684308903
+                "
+              />
+              <img
+                src="https://cdn.shopify.com/s/files/1/1720/3725/files/17134.png?v=1684308903"
+                alt=""
+              />
+            </picture>
+            <picture class="flex-item">
+              <source
+                media="(max-width:768px)"
+                srcset="
+                  https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17132_2x_df086746-a1d5-4b40-b6c3-f242c51be600.png?v=1684309324
+                "
+              />
+              <source
+                srcset="
+                  https://cdn.shopify.com/s/files/1/1720/3725/files/17135.png?v=1684308904
+                "
+              />
+              <img
+                src="https://cdn.shopify.com/s/files/1/1720/3725/files/17135.png?v=1684308904"
+                alt=""
+              />
+            </picture>
+            <picture class="flex-item">
+              <source
+                media="(max-width:768px)"
+                srcset="
+                  https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17131_2x_f8ff1c04-a671-4918-b4bc-e16c39bfe156.png?v=1684309324
+                "
+              />
+              <source
+                srcset="
+                  https://cdn.shopify.com/s/files/1/1720/3725/files/17136.png?v=1684308903
+                "
+              />
+              <img
+                src="https://cdn.shopify.com/s/files/1/1720/3725/files/17136.png?v=1684308903"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="how_to_get nav">
+          <div class="how_to_get_con">
+            <h5 class="title h5 text-center">How To Get These</h5>
+            <h3 class="title text-center">Coupon Code Package?</h3>
+            <ul class="flex " style="--row-per-num:2;">
+              <li class="flex-item-1/2 flex-item-whole"  >
+                <picture>
+                  <source
+                    media="(max-width:768px)"
+                    srcset="
+                      https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17123_2x_d421ab83-2540-44a6-8222-1ac9697ba334.png?v=1680073551
+                    "
+                  />
+                  <source
+                    srcset="
+                      https://cdn.shopify.com/s/files/1/1720/3725/files/17127.png?v=1680056726
+                    "
+                  />
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/1720/3725/files/17127.png?v=1680056726"
+                    alt=""
+                  />
+                </picture>
+              </li>
+              <li class="flex-item-1/2 flex-item-whole">
+                <a href="https://www.whatsapp.com/">
+                  <picture>
+                    <source
+                      media="(max-width:768px)"
+                      srcset="
+                        https://cdn.shopifycdn.net/s/files/1/1720/3725/files/17124_2x_9fe57f2f-889d-4872-92ca-ff5b69f58c57.png?v=1680073551
+                      "
+                    />
+                    <source
+                      srcset="
+                        https://cdn.shopify.com/s/files/1/1720/3725/files/17128.png?v=1680056726
+                      "
+                    />
+                    <img
+                      src="https://cdn.shopify.com/s/files/1/1720/3725/files/17128.png?v=1680056726"
+                      alt=""
+                      class="go_coupon"
+                    />
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="customer nav block">
+        <h3 class="text-center">WhatsApp Member Coupon</h3>
+        <ul class="flex multi-column__item">
+          <li class="flex-item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1720/3725/files/17087.png?v=1680051969"
+              alt=""
+            />
+            <p class="text-center pt-10 ">Exclusive Customer Service</p>
+          </li>
+          <li class="flex-item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1720/3725/files/17089.png?v=1680051969"
+              alt=""
+            />
+            <p class="text-center pt-10 ">$200 Coupon Package</p>
+          </li>
+          <li class="flex-item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1720/3725/files/17090.png?v=1680051969"
+              alt=""
+            />
+            <p class="text-center pt-10 "> Whatsapp Wednesday Sale</p>
+          </li>
+          <li class="flex-item">
+            <img
+              src="https://cdn.shopify.com/s/files/1/1720/3725/files/17091.png?v=1680051969"
+              alt=""
+            />
+            <p class="text-center pt-10 "> Whatsapp Group Sale</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

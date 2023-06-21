@@ -7,7 +7,11 @@ var app = {
                 // {author:"托尔斯泰",name:"伊凡伊里奇之死",isbn:4},
                 // {author:"菲茨杰拉德",name:"了不起的盖茨比",isbn:5}
             ],
-            showModal:false 
+            showModal:false ,
+
+            // add new book 
+            new_title:" new title ",
+            new_author:" new authour "
         }
     },
     template:`
@@ -32,14 +36,30 @@ var app = {
             <div class="modal-head">  </div>
          <div> <h2>Modal Title  </h2>  </div>
           
-        <p>
-            <label for="title">title</label> <input type="text" name="title" id="title" value="" />  
+         <form action="#" method="post" >
+        <div class="row">
+            <label for="title">book name  </label>
 
+            <input class="input" type="text" name="title" v-model="new_title" id="title" value="">
 
-        </p>
+        </div>
 
+        <div class="row">
+            <label for="author">book author  </label>
 
+            <input class="input" type="text" name="author" v-model="new_author" id="author" value="">
+
+        </div>
+        <div class="row">
+
+            <button  type="button" class="button" @click="addBook();">submit</button>
+        </div>
+
+    </form>
+
+         <div class="modal-footer">
           <button @click="showModal = !showModal" class="close-modal">Close Modal</button>
+          </div>
         </div>
       </div>
 
@@ -66,8 +86,39 @@ var app = {
         send(){
             console.log('send method ');
 
-        }
+        },
 
+        addBook(e){
+
+
+            console.log("add book here ");
+          
+            const  base_url= 'http://127.0.0.1:5001';
+            let  that = this 
+            var post_data = {
+                title:this.new_title,
+                author:this.new_author,
+                read:false
+            }
+
+            console.log(post_data);
+            axios.post(base_url + '/books',post_data)
+                .then(function (res) {
+                  console.log('the result ', res );
+                  if(res.data.status =='success'){
+                      console.log("add book success");
+                      that.showModal = false;
+                      that.getBooks();
+                  }
+                  //that.getBooks();
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                })
+                .finally(function () {
+                   console.log('finally here ');
+                });
+        }
    },
    computed:{
 
